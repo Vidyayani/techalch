@@ -17,9 +17,9 @@ npm run start
 
 ## Usage example
 
-_Please use the postman collection link shared, to try out the apis.
+_Please use the postman collection link shared, to try out the apis._
 
-Use import option in collections and use this link <https://www.getpostman.com/collections/35f4b5ef73ab4cbe80b6>_
+_Use import option in collections and use this link <https://www.getpostman.com/collections/35f4b5ef73ab4cbe80b6>_
 
 ## Development details
 
