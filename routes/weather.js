@@ -1,6 +1,5 @@
 const request = require('request')
 const express = require('express')
-const { response } = require('express')
 const router = express.Router()
 
 const options = {
@@ -21,7 +20,7 @@ router.get('', (req,res) => {
         if (error) throw new Error(error)
         if(response.statusCode == '200'){
 
-            body = JSON.parse(body)
+        body = JSON.parse(body)
         var array = body.list.filter(element => {return element.dt_txt.includes("09:00:00")});
         var data_arr = []
         var jsonresponse = { count : array.length,  unit : "metric", location: body.city.name}
@@ -37,7 +36,7 @@ router.get('', (req,res) => {
         res.status(200).json(jsonresponse)
         }else
         res.status(response.statusCode).json(response.statusMessage)
-        console.log("Fetched response from open weather API \n ------------------------------- ", body)
+        console.log("Fetched response from open weather API \n ------------------------------- \n", jsonresponse)
       })
 
 })
