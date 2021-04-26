@@ -8,7 +8,7 @@ Rest APIs curated from open source news and weather forecast APIs.
 
 ## Installation
 
-Run routine install dependencies and start command as follows, this will start the services
+Run routine install dependencies and start command as follows to start the service
 
 ```sh
 npm install 
@@ -17,7 +17,9 @@ npm run start
 
 ## Usage example
 
-_Please find postman file to try out the  apis that are built._
+_Please use the postman collection link shared, to try out the apis.
+
+Use import option in collections and use this link <https://www.getpostman.com/collections/35f4b5ef73ab4cbe80b6>_
 
 ## Development details
 
@@ -25,13 +27,18 @@ _Please find postman file to try out the  apis that are built._
 2. Used a generic crypting module "bcrypt" for encrypting password and comparing encryption for validation
 3. Dev dependencies - eslint and nodemon
 4. IDE - VScode
+5. All values have been mostly hardcoded
 
 ## Project Structure
 
 * /models
     * consists of one file, user data object model script
+    * user.js consists of some cardcoded (user,password) values which can be used as new user info gets saved only in runtime memory
 * /routes
-    * consists of routes categorized by auth, news or weather
+    * consists of routes categorized into different files by auth, news or weather
+    * auth.js - login and signup with encryption and jwt token generation
+    * news.js - jwt verification and fetches top 20 stories by search string
+    * weather.js - fetch 5 day forecast by picking a consistent time of the day 
 * middleware.js
     * to generate and verify jwt tokens
 * server.js
