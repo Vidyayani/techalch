@@ -40,8 +40,9 @@ _Please find postman file to try out the  apis that are built._
 ## Scope
 
 1. Using [logger] with [INFO], [DEBUG], [ERROR] modes 
-2. Better structure of APIs to segregate data, requests and routers
-3. Adding unit testing
+2. Use properties/json file to fetch values like APIKeys,urls,etc
+3. Better structure of APIs to segregate data, requests and routers
+4. Adding unit testing
 
 <!-- Markdown link & img dfn's -->
 [logger]: [https://www.npmjs.com/package/logger]

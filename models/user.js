@@ -5,11 +5,10 @@ const users = [{ email: 'user1@webmail.com', password: '$2b$10$XpqVA..KjXjnzIByJ
 
 exports.getUser =(email) => {
     return new Promise((resolve) =>{
-    var user = users.filter( data => {
+    var users = users.filter( data => {
           return data.email == email;
-     })[0];
-    // return users.some(item => item.email === email);
-    resolve(user);
+     });
+    resolve(users[0]);
     });
 }
 
