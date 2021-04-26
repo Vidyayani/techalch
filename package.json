@@ -1,0 +1,23 @@
+{
+  "name": "techalch",
+  "version": "1.0.0",
+  "description": "A simple API for given assignment",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint **/*.js --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vidyayani/techalch.git"
+  },
+  "author": "Vidyayani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vidyayani/techalch/issues"
+  },
+  "homepage": "https://github.com/Vidyayani/techalch#readme",
+  "devDependencies": {
+    "eslint": "^7.25.0"
+  }
+}
