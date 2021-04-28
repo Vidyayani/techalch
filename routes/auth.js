@@ -24,6 +24,7 @@ router.get('/login', (req, res) => {
 });
 
 router.post('/signup', (req, res) => {
+    if( !req.body.email || !req.body.password) res.status(400).json({ error : "Please provide both email and password"})
     bcrypt.hash(req.body.password, rounds, (error, hash) => {
         if (error) res.status(500).json(error)
         else {
