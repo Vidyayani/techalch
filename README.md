@@ -60,4 +60,4 @@ _Use import option in collections and use this link <https://www.getpostman.com/
 4. ~~Adding unit testing~~
 
 <!-- Markdown link & img dfn's -->
-[logger]: https://www.npmjs.com/package/logger
+[logger]: https://www.npmjs.com/package/log4js

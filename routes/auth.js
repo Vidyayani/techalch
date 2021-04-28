@@ -4,7 +4,7 @@ const User = require('../models/user')
 const bcrypt = require('bcrypt')
 const middleware = require('../middlewares')
 const rounds = 10
-const logger = require('logger').createLogger();
+const logger = require('log4js').getLogger()
 
 
 router.get('/login', (req, res) => {

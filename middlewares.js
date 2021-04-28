@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken')
 const tokenSecret = "my-token-secret"
-const logger = require('logger').createLogger();
+const logger = require('log4js').getLogger()
 
 exports.verify = (req, res, next) => {
     const token = req.headers.authorization

@@ -1,7 +1,9 @@
 const request = require('request')
 const express = require('express')
 const router = express.Router()
-const middleware = require('../middlewares')
+const middleware = require('../middlewares');
+const logger = require('log4js').getLogger()
+
 
 router.get('', middleware.verify, (req, res) => {
     if(!req.query.search)
@@ -42,8 +44,8 @@ else
                 jsonresponse.data.push(json)
 
             });
+            logger.info("Fetched the data of news successfully",jsonresponse)
             res.status(200).json(jsonresponse)
-            console.log(data_arr.length)
 
 
         }else

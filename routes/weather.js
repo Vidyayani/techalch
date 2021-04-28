@@ -1,6 +1,8 @@
 const request = require('request')
 const express = require('express')
 const router = express.Router()
+const logger = require('log4js').getLogger()
+
 
 const options = {
   method: 'GET',
@@ -36,7 +38,7 @@ router.get('', (req,res) => {
         res.status(200).json(jsonresponse)
         }else
         res.status(response.statusCode).json(response.statusMessage)
-        console.log("Fetched response from open weather API \n ------------------------------- \n", jsonresponse)
+        logger.info("Fetched response from open weather API", jsonresponse)
       })
 
 })
