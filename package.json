@@ -4,7 +4,7 @@
   "description": "A simple API for given assignment",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha --timeout 10000",
     "lint": "eslint **/*.js --fix",
     "start": "npm run prod",
     "dev": "nodemon server.js",
@@ -26,8 +26,11 @@
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "chai": "^4.3.4",
+    "chai-http": "^4.3.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
+    "mocha": "^8.3.2",
     "request": "^2.88.2"
   }
 }

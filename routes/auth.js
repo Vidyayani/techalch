@@ -6,6 +6,7 @@ const middleware = require('../middlewares')
 const rounds = 10
 
 router.get('/login', (req, res) => {
+    if( !req.body.email || !req.body.password) res.status(400).json({ error : "Please provide both email and password"})
     User.getUser(req.body.email)
     .then(user => {
         if(!user) res.status(404).json({error: 'no user with that email found'})
