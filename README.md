@@ -15,6 +15,12 @@ npm install
 npm run start
 ```
 
+For unit test cases, run routine command
+
+```sh
+npm run test
+```
+
 ## Usage example
 
 _Please use the postman collection link shared, to try out the apis._
@@ -28,6 +34,8 @@ _Use import option in collections and use this link <https://www.getpostman.com/
 3. Dev dependencies - eslint and nodemon
 4. IDE - VScode
 5. All values have been mostly hardcoded
+6. Used mocha and chai for unit testing
+7. To keep the application simple used data harcoded in JS file instead of using any DB
 
 ## Project Structure
 
@@ -49,7 +57,7 @@ _Use import option in collections and use this link <https://www.getpostman.com/
 1. Using [logger] with [INFO], [DEBUG], [ERROR] modes 
 2. Use properties/json file to fetch values like APIKeys,urls,etc
 3. Better structure of APIs to segregate data, requests and routers
-4. Adding unit testing
+4. ~~Adding unit testing~~
 
 <!-- Markdown link & img dfn's -->
-[logger]:[https://www.npmjs.com/package/logger]
+[logger]: https://www.npmjs.com/package/logger

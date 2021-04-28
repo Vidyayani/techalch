@@ -72,7 +72,7 @@ describe('/GET login', () => {
 describe('/POST signup', () => {
   let newUser = { email: "test@gmail.com", password: "test" }
   let malformedReq = { test: "test" }
-  it('it should add user and get token', (done) => {
+  it('it should add user ,get token and check is user is added to memory', (done) => {
     chai.request(server)
       .post('/auth/signup')
       .send(newUser)
