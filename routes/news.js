@@ -44,7 +44,8 @@ else
                 jsonresponse.data.push(json)
 
             });
-            logger.info("Fetched the data of news successfully",jsonresponse)
+            logger.info("Fetched the data of news successfully ")
+            logger.debug("Fetched the data of news successfully",jsonresponse)
             res.status(200).json(jsonresponse)
 
 

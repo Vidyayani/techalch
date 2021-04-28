@@ -4,7 +4,7 @@ const weatherRoute = require('./routes/weather')
 const newsRoute = require('./routes/news')
 const authRoute = require('./routes/auth')
 const logger = require('log4js').getLogger()
-logger.level = "info"
+logger.level = process.argv[2]
 
 app.use(express.json())
 app.use('/api/news', newsRoute)

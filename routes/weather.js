@@ -38,6 +38,7 @@ router.get('', (req,res) => {
         res.status(200).json(jsonresponse)
         }else
         res.status(response.statusCode).json(response.statusMessage)
+        logger.debug("Fetched response from open weather API", jsonresponse)
         logger.info("Fetched response from open weather API", jsonresponse)
       })
 
