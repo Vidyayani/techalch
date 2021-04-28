@@ -69,6 +69,49 @@ describe('/GET login', () => {
 
     });
 
+    describe('/POST signup', () => {
+      let newUser = { email : "test@gmail.com", password : "test" }
+      it('it should add user and get token', (done) => {
+        chai.request(server)
+            .post('/auth/signup')
+            .send(newUser)
+            .end((err, res) => {
+                should.not.exist(err);
+                  res.should.have.status(200);
+                  res.body.should.be.a('object');
+                  res.body.should.have.property('token');
+                  done();
+            });
+            
+      });
+  }); 
+  
+  describe('/GET news', () => {
+    let user = { email : "user1@webmail.com", password : "user1" }
+    it('it should authorize jwt token and fetch news', (done) => {
+      chai.request(server)
+      .get('/auth/login')
+      .send(user)
+      .end((err, res) => {
+
+let jwttoken = "JWT "+res.body.token
+      chai.request(server)
+          .get('/api/news?search=covid')
+          .set('Authorization',jwttoken)
+          .end((err, res) => {
+              should.not.exist(err);
+                res.should.have.status(200);
+                res.body.should.be.a('object');
+                res.body.should.have.property('data').with.lengthOf(20);
+                // res.body.count.should.equal(5);
+                done();
+          });
+          
+    });
+
+  });
+});
+
 
   describe('/GET weather', () => {
       it('it should GET weather of next five days', (done) => {
