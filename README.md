@@ -54,7 +54,7 @@ _Use import option in collections and use this link <https://www.getpostman.com/
 
 ## Scope
 
-1. Using [logger] with [INFO], [DEBUG], [ERROR] modes 
+1. ~~Using [logger] with [INFO], [DEBUG], [ERROR] modes~~
 2. Use properties/json file to fetch values like APIKeys,urls,etc
 3. Better structure of APIs to segregate data, requests and routers
 4. ~~Adding unit testing~~
