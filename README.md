@@ -35,13 +35,13 @@ _Use import option in collections and use this link <https://www.getpostman.com/
 4. IDE - VScode
 5. All values have been mostly hardcoded
 6. Used mocha and chai for unit testing
-7. To keep the application simple used data harcoded in JS file instead of using any DB
+7. To keep the application simple user data harcoded in JS file instead of using any DB
 
 ## Project Structure
 
 * /models
     * consists of one file, user data object model script
-    * user.js consists of some cardcoded (user,password) values which can be used as new user info gets saved only in runtime memory
+    * user.js consists of some hardcoded (user,password) values which can be used as new user info gets saved only in runtime memory
 * /routes
     * consists of routes categorized into different files by auth, news or weather
     * auth.js - login and signup with encryption and jwt token generation

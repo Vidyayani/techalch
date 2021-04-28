@@ -4,6 +4,8 @@ const User = require('../models/user')
 const bcrypt = require('bcrypt')
 const middleware = require('../middlewares')
 const rounds = 10
+const logger = require('logger').createLogger();
+
 
 router.get('/login', (req, res) => {
     if( !req.body.email || !req.body.password) res.status(400).json({ error : "Please provide both email and password"})
@@ -13,7 +15,9 @@ router.get('/login', (req, res) => {
         else {
             bcrypt.compare(req.body.password, user.password, (error, match) => {
                 if (error) res.status(500).json(error)
-                else if (match) res.status(200).json({token: middleware.generateToken(user)})
+                else if (match){ 
+                    logger.info("Password matched for the user")
+                    res.status(200).json({token: middleware.generateToken(user)})}
                 else res.status(403).json({error: 'passwords do not match'})
             })
         }
